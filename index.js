@@ -1,17 +1,6 @@
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
-var user0 = '';
-var user1 = '';
-var user2 = '';
-var user3 = '';
-var user4 = '';
-var user5 = '';
-var user6 = '';
-var user7 = '';
-var user8 = '';
-var user9 = '';
-var userc = '';
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -20,7 +9,7 @@ logger.add(new logger.transports.Console, {
 logger.level = "debug";
 // Initialize Discord Bot
 var bot = new Discord.Client({
-   token: auth.token,
+   token: process.env.token,
    autorun: true
 });
 bot.on("ready", function (evt) {
