@@ -36,7 +36,7 @@ if (message.substring(0, 1) == '!') {
 			break;
 			case 'r6':
 			case 'R6':
-			bot.sendMessage({to: channelID,message: '@everyone 組隊缺人～揪滿開團！'});
+			bot.sendMessage({to: channelID,message: '<@&614789432247320576> 組隊缺人～揪滿開團！'});
 			var ranr6 = Math.floor(Math.random()*15)+1;
 			if (ranr6 == 15){bot.sendMessage({to: channelID,message: '全國最大Ｒ２０線上商城上線啦！ \r\n欲求不滿這內洽：<@' + userID + '>'});}
 			break;
