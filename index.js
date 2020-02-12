@@ -8,12 +8,6 @@ logger.add(new logger.transports.Console, {
 });
 logger.level = "debug";
 // Initialize Discord Bot
-function egg()
-{
- if (userID == '592713835060789254'){
-	 bot.sendMessage({to: channelID,message: '<@592713835060789254> Like Suck Dick'});
- }
-}
 var bot = new Discord.Client({
    token: auth.token,
    autorun: true
@@ -46,7 +40,6 @@ if (message.substring(0, 1) == '!') {
 			case '啊6':
 			bot.sendMessage({to: channelID,message: '<@&614789432247320576> 組隊缺人～揪滿開團！'});
 			var ranr6 = Math.floor(Math.random()*15)+1;
-			egg();
 			if (ranr6 == 15){bot.sendMessage({to: channelID,message: '@everyone 全國最大Ｒ２０線上商城上線啦！ \r\n欲求不滿這內洽：<@' + userID + '>'});}
 			break;
 			case 'mcl':
