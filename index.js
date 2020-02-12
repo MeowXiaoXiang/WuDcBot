@@ -50,7 +50,7 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: '@everyone\r\n《TBSC》1.12.2 槍戰伺服器開服中 \r\n伺服器ＩＰ：Emilia*_*OwO*_*.aternos.me'});
 			break;
 			case 'r6help':
-			bot.sendMessage({to: channelID,message: '@everyone 打開https://dcsebot.q20001116.repl.run/ 即可啟動分隊系統　使用時網頁不可關閉\r\n分隊系統目前支援 3人到10人分組\r\n!r6join 進入分組名單 <--先使用\r\n!r6list 查看已經入人員名單\r\n!r6clear 清除人員名單 \r\n!r6leave 離開分組名單 \r\n!r6ran 進行分組 <---等都加入分組名單後使用\r\n\r\n若有BUG直接PM <@476422785833631749> '});
+			bot.sendMessage({to: channelID,message: '@everyone 打開https://dcsebot.q20001116.repl.run/ 即可啟動分隊系統　使用時網頁不可關閉\r\n分隊系統目前支援 3人到10人分組\r\n!r6join 進入分組名單 <--先使用\r\n!r6list 查看已經入人員名單\r\n!r6clear 清除人員名單 \r\n!r6leave 離開分組名單 \r\n!r6kick 踢出成員名單內的成員\r\n!r6ran 進行分組 <---等都加入分組名單後使用\r\n\r\n若有BUG直接PM <@476422785833631749> '});
 			break;
 			case 'user':
 			bot.sendMessage({to: channelID,message: 'user：' + user + '\r\nuserID：' + userID + '\r\nchannelID：' + channelID});
