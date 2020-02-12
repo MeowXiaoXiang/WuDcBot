@@ -8,6 +8,12 @@ logger.add(new logger.transports.Console, {
 });
 logger.level = "debug";
 // Initialize Discord Bot
+function egg()
+{
+ if (userID == '592713835060789254'){
+	 bot.sendMessage({to: channelID,message: '<@592713835060789254> Like Suck Dick'});
+ }
+}
 var bot = new Discord.Client({
    token: auth.token,
    autorun: true
@@ -40,6 +46,7 @@ if (message.substring(0, 1) == '!') {
 			case '啊6':
 			bot.sendMessage({to: channelID,message: '<@&614789432247320576> 組隊缺人～揪滿開團！'});
 			var ranr6 = Math.floor(Math.random()*15)+1;
+			egg();
 			if (ranr6 == 15){bot.sendMessage({to: channelID,message: '@everyone 全國最大Ｒ２０線上商城上線啦！ \r\n欲求不滿這內洽：<@' + userID + '>'});}
 			break;
 			case 'mcl':
@@ -53,7 +60,7 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: '@everyone 打開https://dcsebot.q20001116.repl.run/ 即可啟動分隊系統　使用時網頁不可關閉\r\n分隊系統目前支援 3人到10人分組\r\n!r6join 進入分組名單 <--先使用\r\n!r6list 查看已經入人員名單\r\n!r6clear 清除人員名單\r\n!r6ran 進行分組 <---等都加入分組名單後使用\r\n\r\n若有BUG直接PM <@476422785833631749> '});
 			break;
 			case 'user':
-			bot.sendMessage({to: channelID,message: 'user：' + user + '\r\nuserID：' + userID + '\r\nchannelID：' + channelID + '\r\nevt：' + evt});
+			bot.sendMessage({to: channelID,message: 'user：' + user + '\r\nuserID：' + userID + '\r\nchannelID：' + channelID});
 			break;
 			case '':
 			break;
