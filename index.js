@@ -56,7 +56,7 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: 'user：' + user + '\r\nuserID：' + userID + '\r\nchannelID：' + channelID});
 			break;
 			case 'ha':
-			bot.sendMessage({to: channelID,message: '<@' + userID + '> \r\n 載點：https://secure.logmein.com/hamachi.msi　\r\nHamachiID:Emilia_OwO_01 ~ Emilia_OwO_10 \r\n密碼：1'});
+			bot.sendMessage({to: channelID,message: '<@' + userID + '> \r\n載點：https://secure.logmein.com/hamachi.msi　\r\nHamachiID:Emilia_OwO_01 ~ Emilia_OwO_10 \r\n密碼：123'});
 			break;
 			case '':
 			break;
