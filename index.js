@@ -47,13 +47,16 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: 'Minecraft當個創世神盜版啟動器 \r\n https://cdn.discordapp.com/attachments/670907788649824257/673552684581912606/Shiginima_Launcher_SE_v4400.exe'});
 			break;
 			case 'mc':
-			bot.sendMessage({to: channelID,message: '@everyone\r\n《TBSC》1.12.2 槍戰伺服器開服中 \r\n伺服器ＩＰ：Emilia*_*OwO*_*.aternos.me'});
+			bot.sendMessage({to: channelID,message: '@everyone\r\n《TBSC》1.12.2 槍戰伺服器開服中 \r\n伺服器ＩＰ：25.31.211.234'});
 			break;
 			case 'r6help':
 			bot.sendMessage({to: channelID,message: '@everyone 02/13 分隊系統已更新為24H制\r\n分隊系統目前支援 3人到10人分組\r\n!r6join(!r6j) 進入分組名單 <--先使用\r\n!r6list 查看已經入人員名單\r\n!r6clear 清除人員名單 \r\n!r6leave(!r6l) 離開分組名單 \r\n!r6kick 踢出成員名單內的成員\r\n!r6ran 進行分組 <---等都加入分組名單後使用\r\n\r\n若有BUG直接PM <@476422785833631749> '});
 			break;
 			case 'user':
 			bot.sendMessage({to: channelID,message: 'user：' + user + '\r\nuserID：' + userID + '\r\nchannelID：' + channelID});
+			break;
+			case 'ha':
+			bot.sendMessage({to: channelID,message: '<@' + userID + '> \r\n 載點：https://secure.logmein.com/hamachi.msi　\r\nHamachiID:Emilia_OwO_01 ~ Emilia_OwO_10 \r\n密碼：1'});
 			break;
 			case '':
 			break;
