@@ -26,7 +26,7 @@ if (message.substring(0, 1) == '!') {
             case 'ran':
 			case 'Ran':
 			case 'RAN':
-			if (userID == 564784708483940352){
+			if (userID == 476422785833631749){
 				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
 			}else {
 			var ran = Math.floor(Math.random()*16);
