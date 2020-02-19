@@ -35,6 +35,7 @@ if (message.substring(0, 1) == '!') {
 			if (ran != 0 && ran != 15){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
 				
 			}
+			break;
 			case 'ping':
 			bot.sendMessage({to: channelID,message: 'Pong！'});
 			break;
