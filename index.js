@@ -26,6 +26,15 @@ if (message.substring(0, 1) == '!') {
             case 'ran':
 			case 'Ran':
 			case 'RAN':
+			if (userID == 564784708483940352){
+				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
+			}else {
+			var ran = Math.floor(Math.random()*16);
+			if (ran == 15){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
+			if (ran == 0){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
+			if (ran != 0 && ran != 15){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
+				
+			}
 			var ran = Math.floor(Math.random()*16);
 			if (ran == 15){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
 			if (ran == 0){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
