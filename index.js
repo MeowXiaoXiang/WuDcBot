@@ -63,6 +63,9 @@ if (message.substring(0, 1) == '!') {
 			case 'ha':
 			bot.sendMessage({to: channelID,message: '<@' + userID + '> \r\n載點：https://secure.logmein.com/hamachi.msi　\r\nHamachiID:Emilia_OwO_01 ~ Emilia_OwO_10 \r\n密碼：123'});
 			break;
+			case 'am':
+			bot.sendMessage({to: channelID,message: '@everyone睡你麻逼起來Hight 是時候該起床啦！ '});
+			break;
 			case '':
 			break;
          }
