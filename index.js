@@ -75,10 +75,10 @@ if (message.substring(0, 1) == '!') {
 			case 'setchan':
 			case 'setchannel':
 			bot.sendMessage({to: channelID,message: 'channe已設定為' + msg1});
-			channe = channelID
+			channe = channelID;
 			break;
 			case 'msg':
-			channelID = channe
+			channelID = channe;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
 			break;
 			case '':
