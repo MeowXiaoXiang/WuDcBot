@@ -23,17 +23,17 @@ if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
 	var channe = "";
         var cmd = args[0];
-	var setch = args[1];
-	var msg = args[2];
-	var msg2 = args[3];
-	var msg3 = args[4];
-	var msg4 = args[5];
+	var msg = args[1];
+	var msg2 = args[2];
+	var msg3 = args[3];
+	var msg4 = args[4];
+	var msg5 = args[5];
 //bot.sendMessage({to: channelID,message: ''});
         switch(cmd) {
             case 'ran':
 			case 'Ran':
 			case 'RAN':
-			if (userID == 564784708483940352){
+			if (userID == ''){
 				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
 			}else {
 			var ran = Math.floor(Math.random()*16);
@@ -74,12 +74,9 @@ if (message.substring(0, 1) == '!') {
 			break;
 			case 'setchan':
 			case 'setchannel':
-			setch = channe ;
-			bot.sendMessage({to: channelID,message: '已將msg的channeID設定為：' + setch + 'channeID：' + channe});
+			channelID = msg;
 			break;
 			case 'msg':
-			channelID = channe;
-			bot.sendMessage({to: channelID,message: setch+ sw + msg + sw + msg2 + sw + msg3 + sw + msg4});
 			break;
 			case '':
 			break;
