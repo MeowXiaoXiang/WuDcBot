@@ -2,6 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var sw = ' '
+var chan = 'def';
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -21,7 +22,6 @@ bot.on("ready", function (evt) {
 bot.on("message", function (user, userID, channelID, message, evt) {
 if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
-	var chan = 'def';
         var cmd = args[0];
 	var msg1 = args[1];
 	var msg2 = args[2];
