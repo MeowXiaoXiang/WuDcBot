@@ -1,6 +1,7 @@
 var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
+var sw = ' '
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -20,7 +21,13 @@ bot.on("ready", function (evt) {
 bot.on("message", function (user, userID, channelID, message, evt) {
 if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
+	var channe = "";
         var cmd = args[0];
+	var setch = args[1];
+	var msg = args[2];
+	var msg2 = args[3];
+	var msg3 = args[4];
+	var msg4 = args[5];
 //bot.sendMessage({to: channelID,message: ''});
         switch(cmd) {
             case 'ran':
@@ -64,6 +71,15 @@ if (message.substring(0, 1) == '!') {
 			break;
 			case 'am':
 			bot.sendMessage({to: channelID,message: '@everyone睡你麻逼起來Hight 是時候該起床啦！ '});
+			break;
+			case 'setchan':
+			case 'setchannel':
+			channe = setch;
+			bot.sendMessage({to: channelID,message: '已將msg的channeID設定為：' + setch});
+			break;
+			case 'msg':
+			channelID = channe;
+			bot.sendMessage({to: channelID,message: msg + sw + msg2 + sw + msg3 + sw + msg4});
 			break;
 			case '':
 			break;
