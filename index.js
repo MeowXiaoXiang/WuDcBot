@@ -79,7 +79,7 @@ if (message.substring(0, 1) == '!') {
 			break;
 			case 'msg':
 			channelID = channe;
-			bot.sendMessage({to: channelID,message: msg + sw + msg2 + sw + msg3 + sw + msg4});
+			bot.sendMessage({to: channelID,message: setch+ sw + msg + sw + msg2 + sw + msg3 + sw + msg4});
 			break;
 			case '':
 			break;
