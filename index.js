@@ -77,6 +77,9 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: 'channe已設定為' + msg1});
 			channe = channelID;
 			break;
+			case 'showch':
+			bot.sendMessage({to: channelID,message: channe});
+			break;
 			case 'msg':
 			channelID = channe;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
