@@ -21,7 +21,7 @@ bot.on("ready", function (evt) {
 bot.on("message", function (user, userID, channelID, message, evt) {
 if (message.substring(0, 1) == '!') {
         var args = message.substring(1).split(' ');
-	var channe = "";
+	var chan = "";
         var cmd = args[0];
 	var msg1 = args[1];
 	var msg2 = args[2];
@@ -75,13 +75,13 @@ if (message.substring(0, 1) == '!') {
 			case 'setchan':
 			case 'setchannel':
 			bot.sendMessage({to: channelID,message: 'channe已設定為' + msg1});
-			channe = channelID;
+			chan = channelID;
 			break;
 			case 'showch':
-			bot.sendMessage({to: channelID,message: channe});
+			bot.sendMessage({to: channelID,message: chan});
 			break;
 			case 'msg':
-			channelID = channe;
+			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
 			break;
 			case '':
