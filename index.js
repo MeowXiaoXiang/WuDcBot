@@ -75,7 +75,7 @@ if (message.substring(0, 1) == '!') {
 			case 'setchan':
 			case 'setchannel':
 			channe = setch;
-			bot.sendMessage({to: channelID,message: '已將msg的channeID設定為：' + setch});
+			bot.sendMessage({to: channelID,message: '已將msg的channeID設定為：' + setch + 'channeID：' + channe});
 			break;
 			case 'msg':
 			channelID = channe;
