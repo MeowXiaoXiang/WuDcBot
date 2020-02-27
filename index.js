@@ -83,6 +83,8 @@ if (message.substring(0, 1) == '!') {
 			case 'msg':
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
+			channelID = 670610648433950721; 
+			bot.sendMessage({to: channelID,message: '<@' + userID + '>利用!msg說' + msg1 + ' ' + msg2});
 			break;
 			case '':
 			break;
