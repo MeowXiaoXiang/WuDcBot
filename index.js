@@ -85,7 +85,7 @@ if (message.substring(0, 1) == '!') {
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
 			channelID = wuchieh; 
-			bot.sendMessage({to: channelID,message: '<@' + userID + '>利用!msg說' + msg1 + ' ' + msg2});
+			bot.sendMessage({to: channelID,message: '<@' + userID + '> 利用!msg說：' + msg1 + ' ' + msg2});
 			break;
 			case '':
 			break;
