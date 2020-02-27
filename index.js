@@ -87,13 +87,13 @@ if (message.substring(0, 1) == '!') {
 			msg2 = '';
 			}
 			if (msg3 == error){
-			msg4 = '';
+			msg3 = '';
 			}
 			if (msg4 == error){
-			msg5 = '';
+			msg4 = '';
 			}
 			if (msg5 == error){
-			msg6 = '';
+			msg5 = '';
 			}
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
