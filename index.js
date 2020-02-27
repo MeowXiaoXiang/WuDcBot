@@ -82,7 +82,7 @@ if (message.substring(0, 1) == '!') {
 			case 'showch':
 			bot.sendMessage({to: channelID,message: chan});
 			break;
-			case 'msg':
+			case 'chat':
 			if (msg2 == error){
 			msg2 = '';
 			}
@@ -98,7 +98,7 @@ if (message.substring(0, 1) == '!') {
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			channelID = wuchieh; 
-			bot.sendMessage({to: channelID,message: '<@' + userID + '> 利用!msg說：' + msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
+			bot.sendMessage({to: channelID,message: user + ' 利用!msg說：' + msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			break;
 			case '':
 			break;
