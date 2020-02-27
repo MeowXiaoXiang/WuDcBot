@@ -2,6 +2,7 @@ var Discord = require('discord.io');
 var logger = require('winston');
 var auth = require('./auth.json');
 var sw = ' '
+var wuchieh = '670610648433950721'
 var chan = 'def';
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -83,7 +84,7 @@ if (message.substring(0, 1) == '!') {
 			case 'msg':
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
-			channelID = 670610648433950721; 
+			channelID = wuchieh; 
 			bot.sendMessage({to: channelID,message: '<@' + userID + '>利用!msg說' + msg1 + ' ' + msg2});
 			break;
 			case '':
