@@ -29,6 +29,7 @@ if (message.substring(0, 1) == '!') {
 	var msg3 = args[3];
 	var msg4 = args[4];
 	var msg5 = args[5];
+	var error = args[999];
 //bot.sendMessage({to: channelID,message: ''});
         switch(cmd) {
             case 'ran':
@@ -82,7 +83,7 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: chan});
 			break;
 			case 'msg':
-			if (msg2 == 'undefined'){
+			if (msg2 == error){
 			msg2 = '';
 			}
 			channelID = chan;
