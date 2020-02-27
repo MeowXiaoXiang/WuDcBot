@@ -86,10 +86,19 @@ if (message.substring(0, 1) == '!') {
 			if (msg2 == error){
 			msg2 = '';
 			}
+			if (msg3 == error){
+			msg4 = '';
+			}
+			if (msg4 == error){
+			msg5 = '';
+			}
+			if (msg5 == error){
+			msg6 = '';
+			}
 			channelID = chan;
-			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
+			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			channelID = wuchieh; 
-			bot.sendMessage({to: channelID,message: '<@' + userID + '> 利用!msg說：' + msg1 + ' ' + msg2});
+			bot.sendMessage({to: channelID,message: '<@' + userID + '> 利用!msg說：' + msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			break;
 			case '':
 			break;
