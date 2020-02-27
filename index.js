@@ -82,6 +82,9 @@ if (message.substring(0, 1) == '!') {
 			bot.sendMessage({to: channelID,message: chan});
 			break;
 			case 'msg':
+			if (msg2 == 'undefined'){
+			msg2 = '';
+			}
 			channelID = chan;
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2});
 			channelID = wuchieh; 
