@@ -3,7 +3,7 @@ var logger = require('winston');
 var auth = require('./auth.json');
 var sw = ' '
 var wuchieh = '670610648433950721'
-var chan = 'def';
+var chan = '627471208291762176';
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -39,9 +39,11 @@ if (message.substring(0, 1) == '!') {
 				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
 			}else {
 			var ran = Math.floor(Math.random()*16);
+			var ran66 = Math.floor(Math.random()*20);
 			if (ran == 15){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
 			if (ran == 0){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
 			if (ran != 0 && ran != 15){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
+if (ran66 == 15){bot.sendMessage({to: channelID,message: '@everyone <@' + userID + '>不做人啦！ \r\n https://img.moegirl.org/common/a/a6/Jojoios-4.jpg'});}
 			}
 			break;
 			case 'ping':
