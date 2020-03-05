@@ -102,6 +102,9 @@ if (message.substring(0, 1) == '!') {
 			channelID = wuchieh; 
 			bot.sendMessage({to: channelID,message: user + ' 利用!msg說：' + msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			break;
+			case 'help':
+			bot.sendMessage({to: channelID,message: '!r6	!ping	!ran	!mc	!mcl	!am	!user	!chat'});
+			break;
 			case '':
 			break;
          }
