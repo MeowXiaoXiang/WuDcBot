@@ -79,28 +79,22 @@ if (message.substring(0, 1) == '!') {
 			break;
 			case 'setchan':
 			case 'setchannel':
+			if (userID == 476422785833631749){ // 權限檢查
 			bot.sendMessage({to: channelID,message: 'channe已設定為' + msg1});
-			chan = msg1;
+			chan = msg1;}
+			else {bot.sendMessage({to: channelID,message: '你並沒有權限'});}
 			break;
 			case 'showch':
 			bot.sendMessage({to: channelID,message: chan});
 			break;
 			case 'chat':
-			if (msg2 == error){
-			msg2 = '';
-			}
-			if (msg3 == error){
-			msg3 = '';
-			}
-			if (msg4 == error){
-			msg4 = '';
-			}
-			if (msg5 == error){
-			msg5 = '';
-			}
-			channelID = chan;
+			if (msg2 == error){msg2 = '';}
+			if (msg3 == error){msg3 = '';}
+			if (msg4 == error){msg4 = '';}
+			if (msg5 == error){msg5 = '';}
+			channelID = chan; // 發送訊息
 			bot.sendMessage({to: channelID,message: msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
-			channelID = wuchieh; 
+			channelID = wuchieh; //LOG回報
 			bot.sendMessage({to: channelID,message: user + ' 利用!msg說：' + msg1 + ' ' + msg2 + ' ' + msg3 + ' ' + msg4 + ' ' + msg5});
 			break;
 			case 'help':
