@@ -4,6 +4,9 @@ var auth = require('./auth.json');
 var sw = ' '
 var wuchieh = '670610648433950721'
 var chan = '627471208291762176';
+var ranmin = '0';
+var ranmax = '15';
+var ranrs = ranmax - ranmin ;
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -32,13 +35,20 @@ if (message.substring(0, 1) == '!') {
 	var error = args[999];
 //bot.sendMessage({to: channelID,message: ''});
         switch(cmd) {
+			case 'setran':
+			if (isNaN(msg1) or isNaN(msg2)) {bot.sendMessage({to: channelID,message: '必須輸入數字'});}
+			else {
+			ranmin = msg1; ranmax = msg2; renrs = ranmax - ranmin;
+			bot.sendMessage({to: channelID,message: 'RAN最小值已設定為：' + ranmin + '\r\n最大值已設為：' + ranmax '\r\n此指令目前還在測試階段'});
+			}
+			break;
             case 'ran':
 			case 'Ran':
 			case 'RAN':
 			if (userID == ''){
 				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
 			}else {
-			var ran = Math.floor(Math.random()*16);
+			var ran = Math.floor(Math.random()*ranrs)+ranmin;
 			if (ran == 15){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
 			if (ran == 0){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
 			if (ran != 0 && ran != 15){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
