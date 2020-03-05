@@ -4,9 +4,9 @@ var auth = require('./auth.json');
 var sw = ' '
 var wuchieh = '670610648433950721'
 var chan = '627471208291762176';
-var ranmin = '0';
-var ranmax = '15';
-var ranrs = ranmax - ranmin ;
+var ranmin = parseInt(0);
+var ranmax = parseInt(15);
+var ranrs = parseInt(ranmax - ranmin + 1);
 // Configure logger settings
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -36,11 +36,14 @@ if (message.substring(0, 1) == '!') {
 //bot.sendMessage({to: channelID,message: ''});
         switch(cmd) {
 			case 'setran':
-			if (isNaN(msg1) or isNaN(msg2)) {bot.sendMessage({to: channelID,message: '必須輸入數字'});}
+			if (isNaN(msg1)) {bot.sendMessage({to: channelID,message: '最小值必須輸入數字'});if (isNaN(msg2)) {bot.sendMessage({to: channelID,message: '最大值必須輸入數字'});}}
 			else {
-			ranmin = msg1; ranmax = msg2; renrs = ranmax - ranmin;
-			bot.sendMessage({to: channelID,message: 'RAN最小值已設定為：' + ranmin + '\r\n最大值已設為：' + ranmax '\r\n此指令目前還在測試階段'});
-			}
+			ranmin = parseInt(msg1);
+			ranmax = parseInt(msg2);
+			ranrs = parseInt(ranmax - ranmin + 1);
+			if (ranrs < 0) {bot.sendMessage({to: channelID,message: '先輸入最大直在輸入最小值'});}
+			else {bot.sendMessage({to: channelID,message: 'RAN最小值已設定為：' + ranmin + '\r\n最大值已設為：' + ranmax + '\r\n共有' + ranrs + '個數字' + '\r\n此指令目前還在測試階段'});
+			}}
 			break;
             case 'ran':
 			case 'Ran':
@@ -49,9 +52,9 @@ if (message.substring(0, 1) == '!') {
 				bot.sendMessage({to: channelID,message: ':x: ID：<@' + userID + '>已禁止使用此指令到2020/02/25 :x: '});
 			}else {
 			var ran = Math.floor(Math.random()*ranrs)+ranmin;
-			if (ran == 15){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
-			if (ran == 0){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
-			if (ran != 0 && ran != 15){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
+			if (ran == ranmax){bot.sendMessage({to: channelID,message: ':clap: @everyone' + user + ' 成功的骰出了 ' + ran + ' 點！:clap: '});}
+			if (ran == ranmin){bot.sendMessage({to: channelID,message: ' :thumbsdown: @everyone' + user + ' 是個魯蛇他只骰出了 ' + ran + ' 點！ :thumbsdown: '});}
+			if (ran != ranmin && ran != ranmax){bot.sendMessage({to: channelID,message: user + ' 骰出了 ' + ran + ' 點！'});}
 			//var ran66 = Math.floor(Math.random()*20);
 			//if (ran66 == 15){bot.sendMessage({to: channelID,message: '@everyone <@' + userID + '>不做人啦！ \r\n https://img.moegirl.org/common/a/a6/Jojoios-4.jpg'});}
 			}
