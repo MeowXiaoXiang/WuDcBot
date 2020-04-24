@@ -68,7 +68,7 @@ if (message.substring(0, 1) == '/') {
 			case '啊6':
 			if (channelID == 627471208291762176) {bot.sendMessage({to: channelID,message: '<@&614789432247320576> ' + '可憐的<@' + userID + '>想找人打R6' + '\r\n組隊缺人～揪滿開團！'});}
 			else {{bot.sendMessage({to: channelID,message: '@everyone 組隊缺人～揪滿開團！'});}}
-			var ranr6 = Math.floor(Math.random()*15)+1;
+			var ranr6 = Math.floor(Math.random()*30)+1;
 			if (ranr6 == 15){bot.sendMessage({to: channelID,message: '@everyone 全國最大Ｒ２０線上商城上線啦！ \r\n欲求不滿這內洽：<@' + userID + '>'});}
 			break;
 			case 'mcl':
